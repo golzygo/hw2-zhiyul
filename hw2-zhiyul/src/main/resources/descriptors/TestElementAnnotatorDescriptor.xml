@@ -22,6 +22,7 @@
         <inputs/>
         <outputs>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Question</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Answer</type>
         </outputs>
         <languagesSupported/>
       </capability>
