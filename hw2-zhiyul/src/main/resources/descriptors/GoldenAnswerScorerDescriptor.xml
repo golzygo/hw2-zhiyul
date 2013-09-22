@@ -15,7 +15,6 @@
         <import name="descriptors.deiis_types"/>
       </imports>
     </typeSystemDescription>
-    <typePriorities/>
     <fsIndexCollection/>
     <capabilities>
       <capability>
