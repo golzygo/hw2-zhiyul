@@ -9,6 +9,9 @@
     <delegateAnalysisEngine key="TokenAnnotatorDescriptor">
       <import name="descriptors.TokenAnnotatorDescriptor"/>
     </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="TokenOverlapScorerDescriptor">
+      <import name="descriptors.TokenOverlapScorerDescriptor"/>
+    </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>hw2-zhiyul-aae</name>
@@ -21,6 +24,7 @@
       <fixedFlow>
         <node>TestElementAnnotatorDescriptor</node>
         <node>TokenAnnotatorDescriptor</node>
+        <node>TokenOverlapScorerDescriptor</node>
       </fixedFlow>
     </flowConstraints>
     <fsIndexCollection/>
@@ -31,6 +35,7 @@
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Question</type>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Answer</type>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Token</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerScore</type>
         </outputs>
         <languagesSupported/>
       </capability>

@@ -2,10 +2,10 @@
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>true</primitive>
-  <annotatorImplementationName>edu.cmu.deiis.types.TestElementAnnotator</annotatorImplementationName>
+  <annotatorImplementationName>edu.cmu.deiis.types.GoldenAnswerScorer</annotatorImplementationName>
   <analysisEngineMetaData>
-    <name>TestElementAnnotatorDescriptor</name>
-    <description>An annotator that given a text, return the questions and answers in that text.</description>
+    <name>GoldenAnswerScorerDescriptor</name>
+    <description>A scorer that will always give the correct answer score 1, 0 otherwise.</description>
     <version>1.0</version>
     <vendor>Zhiyu Li</vendor>
     <configurationParameters/>
@@ -19,10 +19,12 @@
     <fsIndexCollection/>
     <capabilities>
       <capability>
-        <inputs/>
-        <outputs>
+        <inputs>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Question</type>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Answer</type>
+        </inputs>
+        <outputs>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerScore</type>
         </outputs>
         <languagesSupported/>
       </capability>
