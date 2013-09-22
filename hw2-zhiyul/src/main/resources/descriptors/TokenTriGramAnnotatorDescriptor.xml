@@ -5,9 +5,9 @@
   <annotatorImplementationName>edu.cmu.deiis.types.TokenTriGramAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>TokenTriGramAnnotatorDescriptor</name>
-    <description/>
+    <description>Given Token annotations, save the corresponding TriGram annotations.</description>
     <version>1.0</version>
-    <vendor/>
+    <vendor>Zhiyu Li</vendor>
     <configurationParameters/>
     <configurationParameterSettings/>
     <typeSystemDescription>

@@ -5,7 +5,7 @@
   <annotatorImplementationName>edu.cmu.deiis.types.TokenAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>TokenAnnotatorDescriptor</name>
-    <description>An annotator that given sentences (Questions or Answers), return the tokens in the sentences.</description>
+    <description>An annotator that, given sentences (Questions or Answers), return the tokens in the sentences.</description>
     <version>1.0</version>
     <vendor>Zhiyu Li</vendor>
     <configurationParameters/>

@@ -2,10 +2,10 @@
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>true</primitive>
-  <annotatorImplementationName/>
+  <annotatorImplementationName>edu.cmu.deiis.types.GoldenAnswerScorer</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>GoldenAnswerScorerDescriptor</name>
-    <description>A scorer that will always give the correct answer score 1, 0 otherwise.</description>
+    <description>A scorer that given a question and some answers, assign 1.0 to the correct answer and 0.0 otherwise.</description>
     <version>1.0</version>
     <vendor>Zhiyu Li</vendor>
     <configurationParameters/>
