@@ -5,7 +5,7 @@
   <annotatorImplementationName>edu.cmu.deiis.types.TokenOverlapScorer</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>TokenOverlapScorerDescriptor</name>
-    <description>Given a question and some answers, assign each answer a score using "score = question tokens found / total answer tokens"</description>
+    <description>Given a question and some answers, assign each answer a score using "score = question tokens found / total answer tokens" function.</description>
     <version>1.0</version>
     <vendor>Zhiyu Li</vendor>
     <configurationParameters/>

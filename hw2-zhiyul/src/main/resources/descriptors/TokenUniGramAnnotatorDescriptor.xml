@@ -2,10 +2,10 @@
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>true</primitive>
-  <annotatorImplementationName/>
+  <annotatorImplementationName>edu.cmu.deiis.types.TokenUniGramAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
-    <name>GoldenAnswerScorerDescriptor</name>
-    <description>A scorer that will always give the correct answer score 1, 0 otherwise.</description>
+    <name>TokenUniGramAnnotatorDescriptor</name>
+    <description>Given Token annotations, save the corresponding UniGram annotations.</description>
     <version>1.0</version>
     <vendor>Zhiyu Li</vendor>
     <configurationParameters/>
@@ -20,11 +20,10 @@
     <capabilities>
       <capability>
         <inputs>
-          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Question</type>
-          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Answer</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Token</type>
         </inputs>
         <outputs>
-          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerScore</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.NGram</type>
         </outputs>
         <languagesSupported/>
       </capability>

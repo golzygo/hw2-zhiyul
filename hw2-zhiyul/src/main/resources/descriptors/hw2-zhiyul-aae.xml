@@ -3,8 +3,14 @@
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>false</primitive>
   <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="TokenUniGramAnnotatorDescriptor">
+      <import name="descriptors.TokenUniGramAnnotatorDescriptor"/>
+    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="TestElementAnnotatorDescriptor">
       <import name="descriptors.TestElementAnnotatorDescriptor"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="TokenBiGramAnnotatorDescriptor">
+      <import name="descriptors.TokenBiGramAnnotatorDescriptor"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="TokenAnnotatorDescriptor">
       <import name="descriptors.TokenAnnotatorDescriptor"/>
@@ -24,6 +30,8 @@
       <fixedFlow>
         <node>TestElementAnnotatorDescriptor</node>
         <node>TokenAnnotatorDescriptor</node>
+        <node>TokenUniGramAnnotatorDescriptor</node>
+        <node>TokenBiGramAnnotatorDescriptor</node>
         <node>TokenOverlapScorerDescriptor</node>
       </fixedFlow>
     </flowConstraints>
@@ -36,6 +44,7 @@
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Answer</type>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Token</type>
           <type allAnnotatorFeatures="true">edu.cmu.deiis.types.AnswerScore</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.NGram</type>
         </outputs>
         <languagesSupported/>
       </capability>
