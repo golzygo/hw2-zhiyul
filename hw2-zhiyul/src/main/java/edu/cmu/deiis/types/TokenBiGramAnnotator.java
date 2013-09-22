@@ -26,11 +26,8 @@ public class TokenBiGramAnnotator extends JCasAnnotator_ImplBase{
     while(questionIter.hasNext()){
       Question question=(Question)questionIter.next();
       while(tokenIter.hasNext()){
-        if(token2==null){
+        if(token==null){
           token = (Token)tokenIter.next();
-        }
-        else{
-          token=token2;
         }
         if(tokenIter.hasNext()){
           token2=(Token)tokenIter.next();
@@ -47,9 +44,12 @@ public class TokenBiGramAnnotator extends JCasAnnotator_ImplBase{
             tokens.set(1, token2);
             annotation.setElements(tokens);
             annotation.addToIndexes();
+            // move token forward
+            token=token2;
           }
           else{
             // token2 should belong to next sentence, so we need to break;
+            token=token2;
             break;
           }
         }
@@ -64,9 +64,6 @@ public class TokenBiGramAnnotator extends JCasAnnotator_ImplBase{
       while(tokenIter.hasNext()){
         if(token2==null){
           token = (Token)tokenIter.next();
-        }
-        else{
-          token=token2;
         }
         if(tokenIter.hasNext()){
           token2=(Token)tokenIter.next();
@@ -83,9 +80,12 @@ public class TokenBiGramAnnotator extends JCasAnnotator_ImplBase{
             tokens.set(1, token2);
             annotation.setElements(tokens);
             annotation.addToIndexes();
+            // move token forward
+            token=token2;
           }
           else{
             // token2 should belong to next sentence, so we need to break;
+            token = token2;
             break;
           }
         }
